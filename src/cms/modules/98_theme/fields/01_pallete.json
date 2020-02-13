@@ -1,0 +1,67 @@
+{
+  "label": "Pallete Color",
+  "name": "pallete",
+  "file": "content/theme/pallete.json",
+  "fields": [
+    {
+      "label": "Brand 1",
+      "name": "brand-1",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Brand 2",
+      "name": "brand-2",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Brand 3",
+      "name": "brand-3",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Brand 4",
+      "name": "brand-4",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Brand 5",
+      "name": "brand-5",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Custom 1",
+      "name": "custom-1",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Custom 2",
+      "name": "custom-2",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Custom 3",
+      "name": "custom-3",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Custom 4",
+      "name": "custom-4",
+      "widget": "list",
+      "required": false
+    },
+    {
+      "label": "Custom 5",
+      "name": "custom-5",
+      "widget": "list",
+      "required": false
+    }
+  ]
+}

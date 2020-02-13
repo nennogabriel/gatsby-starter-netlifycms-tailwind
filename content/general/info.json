@@ -1,0 +1,27 @@
+{
+  "email": {
+    "address": "atendimento@fikdik.com.br",
+    "subject": "webapp gatsby tailwind netlify cms"
+  },
+  "phone": {
+    "number": " +5527992246970",
+    "display": " +55 27 99224 6970",
+    "message": "Olá."
+  },
+  "address": {
+    "display": "Some place nice",
+    "locality": "Earth",
+    "region": "Dada",
+    "country": "Noone",
+    "postalCode": "00000",
+    "link": "https://wego.here.com/"
+  },
+  "localID": {
+    "type": "CNPJ",
+    "legalName": "Buziness Name",
+    "foundingDate": "2020-02-07T12:18:19.758Z",
+    "display": "000",
+    "number": "000",
+    "founders": ["Alucard"]
+  }
+}

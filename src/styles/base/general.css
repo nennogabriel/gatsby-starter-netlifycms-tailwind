@@ -1,0 +1,7 @@
+/* purgecss start ignore */
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+/* purgecss end ignore */

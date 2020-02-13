@@ -1,0 +1,16 @@
+{
+  "sans": {
+    "family": "Titillium Web",
+    "variants": [
+      "400",
+      "700"
+    ]
+  },
+  "serif": {
+    "family": "Bebas Neue",
+    "variants": [
+      "400",
+      "700"
+    ]
+  }
+}
