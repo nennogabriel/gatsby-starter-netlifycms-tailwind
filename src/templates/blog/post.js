@@ -16,51 +16,34 @@ import imagecb from "~/utils/imagecb"
 
 export const Template = ({ title, cover, tags, content, componentContent }) => {
   const PostContent = componentContent || Content
-  // text-3xl
   return (
-    <main className="flex-auto">
-      <div className="container page-header hidden md:block">
-        <div className="page-header-img" />
-        <h1>{title}</h1>
+    <div className="md:w-2/3 p-6">
+      <div className="border-dotted border-b-2 mb-2">
+        {cover && (
+          <PreviewCompatibleImage
+            className="mb-4"
+            imageInfo={cover}
+            alt={title}
+          />
+        )}
+        <p className="font-serif text-5xl leading-none mb-4">{title}</p>
       </div>
-      <div className="container bg-white">
-        <div className="flex flex-col md:flex-row">
-          <div className="md:w-2/3 p-6">
-            <div className="border-dotted border-b-2 mb-2">
-              {cover && (
-                <PreviewCompatibleImage
-                  className="mb-4"
-                  imageInfo={cover}
-                  alt={title}
-                />
-              )}
-              <p className="font-serif text-5xl leading-none mb-4">{title}</p>
-            </div>
-            <div className="flex border-dotted border-b-2 pb-2 mb-2">
-              <b className="mr-2">Tags: </b>
-              <ul className="flex flex-wrap text-gray-600">
-                {tags.map((tag, i) => (
-                  <li key={tag}>
-                    <SmartLink
-                      className="mr-2"
-                      to={`/tags/${_.kebabCase(tag)}`}
-                    >
-                      {tag}
-                      {i < tags.length - 1 ? ", " : ""}
-                    </SmartLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      <div className="flex border-dotted border-b-2 pb-2 mb-2">
+        <b className="mr-2">Tags: </b>
+        <ul className="flex flex-wrap text-gray-600">
+          {tags.map((tag, i) => (
+            <li key={tag}>
+              <SmartLink className="mr-2" to={`/tags/${_.kebabCase(tag)}`}>
+                {tag}
+                {i < tags.length - 1 ? ", " : ""}
+              </SmartLink>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            <PostContent className="blog-post-md" content={content} />
-          </div>
-          <div className="md:w-1/3 p-6">
-            <Aside />
-          </div>
-        </div>
-      </div>
-    </main>
+      <PostContent className="blog-post-md" content={content} />
+    </div>
   )
 }
 
@@ -125,13 +108,26 @@ export default function PostBlog({ data }) {
         meta={meta}
       />
 
-      <Template
-        title={title}
-        cover={cover}
-        tags={tags}
-        content={html}
-        componentContent={HTMLContent}
-      />
+      <main className="flex-auto">
+        <div className="container page-header hidden md:block">
+          <div className="page-header-img" />
+          <h1>{title}</h1>
+        </div>
+        <div className="container bg-white">
+          <div className="flex flex-col md:flex-row">
+            <Template
+              title={title}
+              cover={cover}
+              tags={tags}
+              content={html}
+              componentContent={HTMLContent}
+            />
+            <div className="md:w-1/3 p-6">
+              <Aside />
+            </div>
+          </div>
+        </div>
+      </main>
     </PageLayout>
   )
 }

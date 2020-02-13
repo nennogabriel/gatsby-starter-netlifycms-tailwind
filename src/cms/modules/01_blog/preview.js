@@ -9,7 +9,14 @@ function Preview({ entry, widgetFor }) {
   const data = entry.getIn(["data"]).toJS()
 
   if (data) {
-    return <Template title={data.title} content={widgetFor("body")} />
+    return (
+      <Template
+        title={data.title}
+        cover={data.cover}
+        tags={data.tags}
+        content={widgetFor("body")}
+      />
+    )
   } else {
     return <div>Loading ...</div>
   }
