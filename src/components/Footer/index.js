@@ -45,16 +45,16 @@ export default function Footer() {
               <p className="mb-6">
                 <i className="italic">{siteMetadata.slogan}</i>
               </p>
-              <p>
-                <div className="flex items-center">
+              <div>
+                <p className="flex items-center">
                   <SVGIcon name="envelope" className="w-4 h-4 mr-2" />
                   <span>{email.address}</span>
-                </div>
-                <div className="flex items-center">
+                </p>
+                <p className="flex items-center">
                   <SVGIcon name="mobile-alt" className="w-4 h-4 mr-2" />
                   <span>{phone.display}</span>
-                </div>
-              </p>
+                </p>
+              </div>
             </div>
           </div>
         </div>

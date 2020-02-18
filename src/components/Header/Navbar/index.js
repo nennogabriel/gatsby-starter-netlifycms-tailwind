@@ -34,9 +34,8 @@ export default function Navbar() {
       >
         <ul className="flex flex-col flex-wrap md:flex-row">
           {menu.links.map(link => (
-            <li className="">
+            <li className="" key={link.label}>
               <SmartLink
-                key={link.label}
                 className="px-4 py-1 block hover:bg-brand-1-0 hover:text-custom-1-3"
                 activeClassName="bg-brand-1-0"
                 to={link.url}

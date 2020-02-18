@@ -6,18 +6,17 @@ import PropTypes from "prop-types"
 
 const SmartLink = React.forwardRef(
   ({ to, className, activeClassName, children }, ref) => {
-    const link = to || "/"
     return (
       <>
-        {link.startsWith("#") ? (
-          <a className={className} ref={ref} href={link}>
+        {to.startsWith("#") ? (
+          <a className={className} ref={ref} href={to}>
             {children}
           </a>
-        ) : link.startsWith("http") ? (
+        ) : to.startsWith("http") ? (
           <OutboundLink
             className={className}
             ref={ref}
-            href={link}
+            href={to}
             target="_blank"
           >
             {children}
@@ -28,7 +27,7 @@ const SmartLink = React.forwardRef(
             activeClassName={activeClassName || "active"}
             component={Link}
             ref={ref}
-            to={link}
+            to={to}
           >
             {children}
           </Link>
@@ -39,10 +38,10 @@ const SmartLink = React.forwardRef(
 )
 
 SmartLink.propTypes = {
-  to: PropTypes.String,
+  to: PropTypes.string,
 }
 
 SmartLink.defaultProps = {
-  to: null,
+  to: "/",
 }
 export default SmartLink
