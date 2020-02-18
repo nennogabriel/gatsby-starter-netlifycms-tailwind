@@ -1,6 +1,6 @@
 // See https://tailwindcss.com/docs/configuration for details
 const googleFonts = require("./content/theme/google_fonts.json")
-const pallete = require("./content/theme/pallete.json")
+const palette = require("./content/theme/palette.json")
 
 module.exports = {
   corePlugins: {
@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        ...pallete,
+        ...palette,
       },
     },
   },

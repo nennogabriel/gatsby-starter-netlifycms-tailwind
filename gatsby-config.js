@@ -2,7 +2,7 @@ const analytics = require("./content/settings/analytics.json")
 const manifest = require("./content/settings/manifest.json")
 const siteMetadata = require("./content/settings/siteMetadata.json")
 const googleFonts = require("./content/theme/google_fonts.json")
-const colors = require("./content/theme/pallete.json")
+const colors = require("./content/theme/palette.json")
 
 module.exports = {
   siteMetadata: {},
@@ -53,7 +53,7 @@ module.exports = {
       resolve: "gatsby-plugin-nprogress",
       options: {
         // Setting a color is optional.
-        color: `${colors["brand-1"][0]}`,
+        color: `${colors["nprogress"][0]}`,
         // Disable the loading spinner.
         showSpinner: false,
       },
