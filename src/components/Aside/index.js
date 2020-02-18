@@ -46,7 +46,7 @@ function AsideBlogPots({ data }) {
         <ul className="flex flex-wrap">
           {tags.map(tag => (
             <li
-              className="py-1 px-4 bg-brand-1-0 text-white mr-1 mb-1 hover:bg-custom-1-6"
+              className="py-1 px-4 bg-brand-1-0 text-white mr-1 mb-1 hover:bg-gray-700"
               key={`${tag}`}
             >
               <SmartLink to={`/tags/${_.kebabCase(tag)}`}>{tag}</SmartLink>

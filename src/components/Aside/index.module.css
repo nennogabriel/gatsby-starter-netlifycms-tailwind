@@ -1,6 +1,6 @@
 .aside {
   & .title {
-    @apply text-2xl font-semibold font-serif tracking-wide text-custom-1-5 pb-2 mb-2 block relative;
+    @apply text-2xl font-semibold font-serif tracking-wide text-gray-600 pb-2 mb-2 block relative;
     border-bottom: 1px solid #ccc;
     &::after {
       content: " ";

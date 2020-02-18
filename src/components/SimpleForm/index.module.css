@@ -8,11 +8,11 @@
   & input,
   & textarea {
     @apply py-2 px-4 w-full rounded font-sans text-base;
-    border: 1px solid theme("colors.custom-1.1");
+    border: 1px solid theme("colors.gray-200");
     background-color: rgba(255, 255, 255, 0.8);
 
     &::placeholder {
-      @apply text-custom-1-4;
+      @apply text-gray-500;
     }
   }
 

@@ -2,7 +2,7 @@
   cursor: progress;
 
   & span {
-    background: theme("colors.custom-1.1");
+    background: theme("colors.gray-300");
     display: block;
     position: relative;
     width: 2rem;

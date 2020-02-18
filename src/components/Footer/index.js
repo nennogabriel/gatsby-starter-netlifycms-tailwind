@@ -41,7 +41,7 @@ export default function Footer() {
             <div className="mb-4">
               <img src={siteMetadata.logoAlt} alt="talent logo" />
             </div>
-            <div className="text-custom-1-0">
+            <div className="text-white">
               <p className="mb-6">
                 <i className="italic">{siteMetadata.slogan}</i>
               </p>

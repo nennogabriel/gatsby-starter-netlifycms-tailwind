@@ -13,7 +13,7 @@ export default function Navbar() {
     setNavbarOpen(!navbarOpen)
   }
   return (
-    <div className="bg-custom-1-3 md:flex md:justify-between md:items-center">
+    <div className="bg-gray-300 md:flex md:justify-between md:items-center">
       <div className="p-3 flex items-center justify-between md:hidden">
         <BurgerMenu toggleNavbar={toggleNavbar} navbarOpen={navbarOpen} />
         <div>
@@ -30,13 +30,13 @@ export default function Navbar() {
       <nav
         className={`${
           navbarOpen ? "block" : "hidden"
-        } font-serif bg-custom-1-4 w-full text-custom-1-0 text-center border-brand-1-0 border-b-4 md:text-2xl md:block`}
+        } font-serif bg-gray-800 w-full text-white text-center border-brand-1-0 border-b-4 md:text-2xl md:block`}
       >
         <ul className="flex flex-col flex-wrap md:flex-row">
           {menu.links.map(link => (
             <li className="" key={link.label}>
               <SmartLink
-                className="px-4 py-1 block hover:bg-brand-1-0 hover:text-custom-1-3"
+                className="px-4 py-1 block hover:bg-brand-1-0 hover:text-gray-400"
                 activeClassName="bg-brand-1-0"
                 to={link.url}
               >
