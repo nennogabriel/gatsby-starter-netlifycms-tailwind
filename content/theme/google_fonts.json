@@ -1,16 +1,15 @@
 {
   "sans": {
-    "family": "Titillium Web",
+    "family": "Roboto",
     "variants": [
       "400",
       "700"
     ]
   },
   "serif": {
-    "family": "Bebas Neue",
+    "family": "Roboto Slab",
     "variants": [
-      "400",
-      "700"
+      "400"
     ]
   }
 }

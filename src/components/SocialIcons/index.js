@@ -11,7 +11,11 @@ export default function SocialIcons() {
   return (
     <>
       {networks.map((network, index) => (
-        <SmartLink to={network.link} key={`${network.name} - ${index}`}>
+        <SmartLink
+          to={network.link}
+          eventLabel={network.name}
+          key={`${network.name} - ${index}`}
+        >
           <SVGIcon
             className={`${styles.social} ${
               styles[network.name]

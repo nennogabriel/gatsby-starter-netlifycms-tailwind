@@ -5,12 +5,20 @@
       "url": "/"
     },
     {
-      "label": "Blog",
-      "url": "/blog/"
+      "label": "Objetivos",
+      "url": "#objetivos"
     },
     {
-      "label": "Links",
-      "url": "/links/"
+      "label": "Diferencial",
+      "url": "#diferencial"
+    },
+    {
+      "label": "Planos e Preços",
+      "url": "#planos"
+    },
+    {
+      "label": "Entre em contato",
+      "url": "/contato/"
     }
   ]
 }

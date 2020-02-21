@@ -5,23 +5,25 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import PropTypes from "prop-types"
 
 const SmartLink = React.forwardRef(
-  ({ to, className, activeClassName, children }, ref) => {
+  (
+    {
+      to,
+      className,
+      activeClassName,
+      eventAction,
+      eventCategory,
+      eventLabel,
+      children,
+    },
+    ref
+  ) => {
     return (
       <>
         {to.startsWith("#") ? (
           <a className={className} ref={ref} href={to}>
             {children}
           </a>
-        ) : to.startsWith("http") ? (
-          <OutboundLink
-            className={className}
-            ref={ref}
-            href={to}
-            target="_blank"
-          >
-            {children}
-          </OutboundLink>
-        ) : (
+        ) : to.startsWith("/") && !to.startsWith("//") ? (
           <Link
             className={className}
             activeClassName={activeClassName || "active"}
@@ -31,6 +33,18 @@ const SmartLink = React.forwardRef(
           >
             {children}
           </Link>
+        ) : (
+          <OutboundLink
+            className={className}
+            ref={ref}
+            href={to}
+            target="_blank"
+            eventAction={eventAction}
+            eventCategory={eventCategory}
+            eventLabel={eventLabel}
+          >
+            {children}
+          </OutboundLink>
         )}
       </>
     )
@@ -39,9 +53,19 @@ const SmartLink = React.forwardRef(
 
 SmartLink.propTypes = {
   to: PropTypes.string,
+  className: PropTypes.string,
+  activeClassName: PropTypes.string,
+  eventAction: PropTypes.string,
+  eventCategory: PropTypes.string,
+  eventLabel: PropTypes.string,
 }
 
 SmartLink.defaultProps = {
   to: "/",
+  className: "",
+  activeClassName: "",
+  eventAction: "Click",
+  eventCategory: "Outbound Link",
+  eventLabel: null,
 }
 export default SmartLink

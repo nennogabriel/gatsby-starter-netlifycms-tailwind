@@ -1,27 +1,29 @@
 {
   "email": {
     "address": "atendimento@fikdik.com.br",
-    "subject": "webapp gatsby tailwind netlify cms"
+    "subject": "contato pelo webapp #fikdik"
   },
   "phone": {
     "number": " +5527992246970",
     "display": " +55 27 99224 6970",
-    "message": "Olá."
+    "message": "Olá #fikdik. "
   },
   "address": {
-    "display": "Some place nice",
-    "locality": "Earth",
-    "region": "Dada",
-    "country": "Noone",
-    "postalCode": "00000",
+    "display": "Rua Joaquim da Silva Lima",
+    "locality": "Guarapari",
+    "region": "ES",
+    "country": "Brazil",
+    "postalCode": "29200260",
     "link": "https://wego.here.com/"
   },
   "localID": {
     "type": "CNPJ",
-    "legalName": "Buziness Name",
-    "foundingDate": "2020-02-07T12:18:19.758Z",
+    "legalName": "Seal Works Agencia Digital Eireli",
+    "foundingDate": "2013-03-01T12:18:19.758Z",
     "display": "000",
     "number": "000",
-    "founders": ["Alucard"]
+    "founders": [
+      "Pedro Moreno"
+    ]
   }
 }
